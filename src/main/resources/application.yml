@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/finpay_wallet_db
+    url: jdbc:postgresql://finpay-postgres:5432/finpay_wallet_db
     username: admin
     password: admin
   jpa:
@@ -13,7 +13,7 @@ spring:
 
   # Cấu hình chuẩn thẳng hàng với jpa/datasource
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: finpay-kafka:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
